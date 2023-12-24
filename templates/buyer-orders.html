@@ -262,7 +262,7 @@
 												<figure class="profile-image">
 													<img src="assets/extra-images/team-medium-img1.jpg" alt="">
 												</figure>
-												Buyer Demo
+												{{form.last_name}} {{form.first_name}}
 											</a>
 											<ul>
 												<li><a href="buyer-dashboard.html"><i class="icon-dashboard3"></i>Dashboard</a></li>
@@ -272,7 +272,7 @@
 												<li><a href="buyer-shortlists.html"><i class="icon-heart"></i>Shortlists</a></li>
 												<li><a href="buyer-statement.html"><i class="icon-file-text22"></i>Statement</a></li>
 												<li><a href="buyer-account-setting.html"><i class="icon-build"></i>Account Settings</a></li>
-												<li><a href="registration.html"><i class="icon-log-out"></i>Sign out</a></li>
+												<li><a href="{% url 'user-logout' %}"><i class="icon-log-out"></i>Sign out</a></li>
 											</ul>
 										</li>
 									</ul>
@@ -301,10 +301,10 @@
 										</figure>
 									</div>
 									<div class="text-holder">
-										<span class="restaurant-title">Buyer Demo</span>
+										<span class="restaurant-title">{{form.last_name}} {{form.first_name}}</span>
 										<ul class="user-info-contact">
 											<li class="cell"><i class="icon-phone"></i><a href="tel:0123456789">012 3456 789</a></li>
-											<li class="email"><i class="icon-mail5"></i><a href="mailto:dum4@chimpgroup.com">dum4@chimpgroup.com</a></li>
+											<li class="email"><i class="icon-mail5"></i><a href="mailto:{{form.email}}">{{form.email}}</a></li>
 										</ul>
 									</div>
 								</div>
@@ -331,7 +331,7 @@
 										<li><a href="buyer-statement.html"><i class="icon-file-text22"></i>Statement</a></li>
 										<li><a href="buyer-account-setting.html"><i class="icon-build"></i>Account Settings</a></li>
 										<li><a id="profile_delete" href="#"><i class="icon-delete"></i>Delete Profile</a></li>
-										<li><a href="registration.html"><i class="icon-log-out"></i>Sign out</a></li>
+										<li><a href="{% url "user-logout" %}"><i class="icon-log-out"></i>Sign out</a></li>
 									</ul>
 								</div>
 							</div>
